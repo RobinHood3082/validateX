@@ -3,7 +3,8 @@
 
 int get_digits(long long num)
 {
-    return (int) floor(log10(num));
+  //returns the number of digits
+  return (int) floor(log10(num));
 }
 
 int get_digit_sum(int n)
