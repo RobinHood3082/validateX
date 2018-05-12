@@ -23,7 +23,7 @@ int main(void)
     digits++;
 
     for (int i = 0; i < digits; i++) {
-        if (i & 1)
+        if (i & 1) //if i is an odd number
         {
             sum += get_digit_sum(2 * (credit_card % 10));
         }
@@ -48,11 +48,11 @@ int main(void)
         if (digits == 15 && (first_digits == 34 || first_digits == 37)) {
             printf("AMEX\n");
         }
-        else if (digits == 16 && (first_digits == 51 || first_digits == 52 || first_digits == 53 || first_digits == 54 || first_digits == 55))
+        else if (digits == 16 && ((first_digits >= 50 && first_digits <= 55) || (first_digits >= 22 && first_digits <= 27)))
         {
             printf("MASTERCARD\n");
         }
-        else if ((digits == 13 || digits == 16) && (first_digits / 10 == 4))
+        else if ((digits >= 13 && digits <= 16) && (first_digits / 10 == 4))
         {
             printf("VISA\n");
         }
